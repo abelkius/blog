@@ -1,6 +1,8 @@
 import Koa from 'koa';
 import dotenv from 'dotenv';
-import router from './routes/index';
+import indexRouter from './routes/index';
+import postsRouter from './routes/posts';
+
 dotenv.load();
 
 const app = new Koa();
@@ -19,7 +21,8 @@ app.use(async (ctx, next) => {
   ctx.set('X-Response-Time', `${ms}ms`);
 });
 
-app.use(router.routes());
+app.use(indexRouter.routes());
+app.use(postsRouter.routes());
 
 app.on('error', (err, ctx) => {
   log.error('server error', err, ctx)

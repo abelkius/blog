@@ -1,6 +1,6 @@
 // Update with your config settings.
 import path from 'path';
-const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
+const BASE_PATH = path.dirname('src/server/db');
 
 export default {
   development: {
