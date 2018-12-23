@@ -1,6 +1,6 @@
 const Koa = require('koa');
 const dotenv = require('dotenv');
-
+const router = require('./routes/index');
 dotenv.load();
 
 const app = new Koa();
@@ -19,9 +19,7 @@ app.use(async (ctx, next) => {
   ctx.set('X-Response-Time', `${ms}ms`);
 });
 
-app.use(async ctx => {
-  ctx.body = 'Hello World!';
-});
+app.use(router.routes());
 
 app.on('error', (err, ctx) => {
   log.error('server error', err, ctx)
