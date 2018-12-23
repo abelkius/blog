@@ -1,8 +1,8 @@
 // Update with your config settings.
-const path = require('path');
+import path from 'path';
 const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
 
-module.exports = {
+export default {
   development: {
     client: 'pg',
     connection: 'postgres://admin:123456@localhost:5432/blog',

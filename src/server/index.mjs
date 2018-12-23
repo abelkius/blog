@@ -1,6 +1,6 @@
-const Koa = require('koa');
-const dotenv = require('dotenv');
-const router = require('./routes/index');
+import Koa from 'koa';
+import dotenv from 'dotenv';
+import router from './routes/index';
 dotenv.load();
 
 const app = new Koa();

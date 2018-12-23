@@ -1,5 +1,5 @@
 
-exports.seed = function(knex, Promise) {
+export const seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('posts').del()
     .then(function () {
