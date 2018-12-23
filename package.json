@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "dot-env": "^0.0.1",
+    "dotenv": "^6.2.0",
+    "koa": "^2.6.2",
+    "nodemon": "^1.18.9"
+  }
+}
