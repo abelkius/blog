@@ -22,12 +22,14 @@ app.use(async (ctx, next) => {
 });
 
 app.use(indexRouter.routes());
-app.use(postsRouter.routes());
+// app.use(postsRouter.routes());
 
 app.on('error', (err, ctx) => {
   log.error('server error', err, ctx)
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
+
+export default server;

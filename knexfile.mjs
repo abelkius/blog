@@ -13,4 +13,14 @@ export default {
       directory: path.join(BASE_PATH, 'seeds')
     }
   },
+  test: {
+    client: 'pg',
+    connection: 'postgres://admin:123456@localhost:5432/blog_test',
+    migrations: {
+      directory: path.join(BASE_PATH, 'migrations')
+    },
+    seeds: {
+      directory: path.join(BASE_PATH, 'seeds')
+    }
+  },
 };
